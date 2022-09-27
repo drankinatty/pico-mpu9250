@@ -18,14 +18,14 @@ pico_sdk_init()
 #   MPU9250 - define to activate magnetometer (none on MPU6050)
 #   DENOISE - define to apply denoise limits to prevent bounce around zero
 #   SETBIAS - apply chip-specific axis bias to zero axis
-#   MPUCHIP - =No. apply values specific to individual MPU board
+#   MPUCHIP - =No. allow multiple sets of axis biases for different boards
 #   PICOTOOL - make i2c pins available to picotool
 #
 add_compile_definitions (PRIVATE
   MPU9250
   DENOISE
   SETBIAS
-  MPUCHIP=1
+  # MPUCHIP=1    (see pico_mpu.c examples 1,2 are for my 2 boards)
 )
 
 # create executable with project name
