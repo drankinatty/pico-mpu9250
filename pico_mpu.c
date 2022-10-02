@@ -20,31 +20,31 @@
   static const float AYBIAS   =  0.00f;
   static const float AZBIAS   =  0.01f;
 
-  static const int8_t GXBIAS  =   0x20;
-  static const int8_t GYBIAS  =   0x11;
-  static const int8_t GZBIAS  =    -12;
+  static const int16_t GXBIAS =   0x20;
+  static const int16_t GYBIAS =   0x11;
+  static const int16_t GZBIAS =    -12;
 #elif MPUCHIP == 2
   static const float AXBIAS   = -0.05f;
   static const float AYBIAS   = -0.03f;
   static const float AZBIAS   =  0.02f;
 
-  static const int8_t GXBIAS  =   -102;
-  static const int8_t GYBIAS  =    -16;
-  static const int8_t GZBIAS  =     16;
+  static const int16_t GXBIAS =   -102;
+  static const int16_t GYBIAS =    -16;
+  static const int16_t GZBIAS =     16;
 #else
   static const float AXBIAS   =  0.00f;
   static const float AYBIAS   =  0.00f;
   static const float AZBIAS   =  0.00f;
 
-  static const int8_t GXBIAS  =   0x00;
-  static const int8_t GYBIAS  =   0x00;
-  static const int8_t GZBIAS  =   0x00;
+  static const int16_t GXBIAS =   0x00;
+  static const int16_t GYBIAS =   0x00;
+  static const int16_t GZBIAS =   0x00;
 #endif
 
 #ifdef DENOISE
   /* denoise limits stop bounce about zero on each axis */
   static const float DENOISE_LIM_ACCEL  =   0.1f;
-  static const float DENOISE_LIM_GYRO   =   0.4f;
+  static const float DENOISE_LIM_GYRO   =   0.2f;
 #else
   static const float DENOISE_LIM_ACCEL  =   0.0f;
   static const float DENOISE_LIM_GYRO   =   0.0f;
